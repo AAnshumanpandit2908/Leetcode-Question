@@ -1,11 +1,16 @@
 class Solution {
     public int fib(int n) {
-        return helper(n);
+        Integer [] dp = new Integer[n+1];
+        return helper(n ,dp);
     }
-    public int helper(int n){
+    public int helper(int n , Integer[] dp){
         if(n==0 || n == 1){
             return n;
         }
-        return  helper(n-1) + helper(n-2);
+        if(dp[n] != null){
+            return dp[n];
+        }
+        dp[n] =  helper(n-1 , dp) + helper(n-2 , dp);
+        return dp[n];
     }
 }
