@@ -22,7 +22,7 @@ class Solution {
             maxLen = Math.max(maxLen, dp[i]);
         }
         for (int i = 0; i < n; i++) {
-            if (dp[i] == maxLen) {
+            if (dp[i] == maxLen){
                 ans += count[i];
             }
         }
