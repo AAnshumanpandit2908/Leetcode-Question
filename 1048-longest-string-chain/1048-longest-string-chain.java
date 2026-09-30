@@ -19,7 +19,7 @@ class Solution {
         }
         return ans;
     }
-    private boolean isPredecessor(String shorter, String longer) {
+    public boolean isPredecessor(String shorter, String longer) {
         if (longer.length() != shorter.length() + 1) {
             return false;
         }
