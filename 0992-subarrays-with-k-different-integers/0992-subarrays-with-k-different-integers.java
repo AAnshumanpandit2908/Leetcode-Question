@@ -3,8 +3,7 @@ class Solution {
         return helper(nums, k) - helper(nums, k - 1);
     }
     public int helper(int[] nums, int k) {
-        if (k <= 0)
-            return 0;
+
         HashMap<Integer, Integer> map = new HashMap<>();
         int left = 0;
         int maxLen = 0;
